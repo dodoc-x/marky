@@ -30,6 +30,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^4.1.0",
     "@electron-toolkit/tsconfig": "^1.0.1",
+    "@tailwindcss/vite": "^4.0.0",
     "@types/node": "^20.14.8",
     "@vitejs/plugin-vue": "^5.0.5",
     "electron": "^31.0.2",
@@ -39,6 +40,8 @@
     "eslint-plugin-format": "^1.0.1",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
+    "sass": "^1.83.4",
+    "tailwindcss": "^4.0.0",
     "typescript": "^5.5.2",
     "vite": "^5.3.1",
     "vue": "^3.4.30",
