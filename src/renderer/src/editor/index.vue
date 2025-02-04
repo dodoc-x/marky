@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import Link from '@tiptap/extension-link'
 import Table from '@tiptap/extension-table'
 import TableCell from '@tiptap/extension-table-cell'
 import TableHeader from '@tiptap/extension-table-header'
@@ -8,6 +7,7 @@ import TaskItem from '@tiptap/extension-task-item'
 import TaskList from '@tiptap/extension-task-list'
 import StarterKit from '@tiptap/starter-kit'
 import { EditorContent, useEditor } from '@tiptap/vue-3'
+import { link, symbol } from './extensions'
 
 defineOptions({
   name: 'MaskyEditor',
@@ -27,16 +27,20 @@ const editor = useEditor({
     TaskItem,
 
     // mark
-    Link,
+    link.configure({
+      openOnClick: false,
+    }),
+
+    // other
+    symbol,
   ],
-  editorProps: {
-    attributes: {
-      class: 'py-4 px-6 focus:outline-none',
-    },
-  },
 })
 </script>
 
 <template>
   <EditorContent :editor="editor" />
 </template>
+
+<style lang="scss">
+@import url('./index.scss');
+</style>
